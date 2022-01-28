@@ -1,0 +1,5 @@
+
+
+cd ~ && cd /d/Personal/Projects/React.Js/react-budget-app
+
+npm start
