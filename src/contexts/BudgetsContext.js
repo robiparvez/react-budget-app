@@ -4,9 +4,9 @@ import useLocalStorage from '../hooks/useLocalStorage';
 
 const BudgetsContext = createContext();
 
-export function useBudgets() {
-    return useContext(BudgetsContext);
-}
+export const useBudgets = () => useContext(BudgetsContext);
+
+export const UNCATEGORIZED_BUDGET = 'Uncategorized';
 
 export const BudgetsProvider = ({ children }) => {
     const [budgets, setBudgets] = useLocalStorage('budgets', []);
