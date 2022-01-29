@@ -1,7 +1,7 @@
 import { Button, Card, ProgressBar, Stack } from 'react-bootstrap';
 import useBudgetCard from '../hooks/useBudgetCard';
 
-export default function BudgetCard({ name, amount, max, gray, openAddExpenseClick, hideButtons }) {
+export default function BudgetCard({ name, amount, max, gray, openAddExpenseClick, hideButtons, openViewExpensesClick }) {
     const { classNames, getProgressBarVariant, currencyFormatter } = useBudgetCard(amount, max, gray);
 
     return (
@@ -25,7 +25,9 @@ export default function BudgetCard({ name, amount, max, gray, openAddExpenseClic
                         <Button variant='outline-primary' className='ms-auto' onClick={openAddExpenseClick}>
                             Add Expense
                         </Button>
-                        <Button variant='outline-secondary'>View Expenses</Button>
+                        <Button variant='outline-secondary' onClick={openViewExpensesClick}>
+                            View Expenses
+                        </Button>
                     </Stack>
                 )}
             </Card.Body>

@@ -7,10 +7,8 @@ export default function useUncategorizedBudget() {
         return total + expense.amount;
     }, 0);
 
-    if (amount === 0) return null;
-
     return {
         UNCATEGORIZED_BUDGET,
-        amount,
+        amount
     };
 }
