@@ -1,4 +1,4 @@
-# Survey Management System
+# React Budget App
 
 ## Tech Specification
 -   React
